@@ -9,7 +9,7 @@
     "start": "npm run sass && nodemon server.js"
   },
   "keywords": [],
-  "author": "Joshua Gonzalez",
+  "author": "Eliam Jesus Cauich Villanueva",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.3",

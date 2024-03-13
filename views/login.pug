@@ -1,0 +1,24 @@
+//Comenzamos con el login.
+//login.pug
+
+doctype html
+html
+  head
+    link(rel='stylesheet', href='../styles/sass/styles.sass')
+    link(rel='icon', href='../public/images/favicon_ecommerce.png', type='image/x-icon')
+    h1 #{title}
+  body
+    .form-container-login 
+      h2 ¡Completa el formulario para iniciar sesión!
+      form(action="/login", method="post")
+        label(for="username") Usuario:
+        input(type="text", id="username", name="username", placeholder="Ingresa tu usuario")
+        br
+        label(for="password") Contraseña:
+        input(type="password", id="password", name="password", placeholder="Ingresa tu contraseña")
+        br
+        input(type="submit", value="Iniciar sesión")  
+        br
+        a(href="#") ¿Olvidaste tu contraseña?
+        br
+        a(href="#") ¿No tienes una cuenta? Regístrate aquí

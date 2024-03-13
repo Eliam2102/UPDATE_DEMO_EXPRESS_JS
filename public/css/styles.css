@@ -219,4 +219,41 @@ p.empty-cart {
   margin-top: 20px;
 }
 
+
+.form-container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+  .form-container-login form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9; }
+    .form-container-login form label {
+      display: block;
+      margin-bottom: 10px; }
+    .form-container-login form input[type="text"],
+    .form-container-login form input[type="password"] {
+      width: calc(100% - 22px);
+      /* Considera el ancho del borde */
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px; }
+    .form-container-login form input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 3px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease; }
+      .form-container-login form input[type="submit"]:hover {
+        background-color: #0056b3; }
+
+
 /*# sourceMappingURL=styles.css.map */
