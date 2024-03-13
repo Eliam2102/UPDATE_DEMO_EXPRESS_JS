@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title #{title}
+
+  body
+    .recuperar-contrasena-container
+      h2 ¿Olvidaste tu contraseña?
+      form(action="/recuperar-contrasena", method="post")
+        label(for="email") Correo electrónico:
+        input(type="email", id="email", name="email", required)
+        br
+        input(type="submit", value="Recuperar Contraseña")

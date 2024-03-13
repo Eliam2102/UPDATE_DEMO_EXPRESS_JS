@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title #{title}
+
+  body
+    .registro-container
+      h2 ¡No tienes cuenta? Regístrate ahora
+      form(action="/registro", method="post")
+        label(for="nombre") Nombre:
+        input(type="text", id="nombre", name="nombre", required)
+        br
+        label(for="email") Correo electrónico:
+        input(type="email", id="email", name="email", required)
+        br
+        label(for="password") Contraseña:
+        input(type="password", id="password", name="password", required)
+        br
+        label(for="confirm_password") Confirmar Contraseña:
+        input(type="password", id="confirm_password", name="confirm_password", required)
+        br
+        input(type="submit", value="Registrarse")

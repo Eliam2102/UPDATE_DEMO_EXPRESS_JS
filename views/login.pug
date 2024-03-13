@@ -1,12 +1,9 @@
-//Comenzamos con el login.
-//login.pug
-
 doctype html
 html
   head
     link(rel='stylesheet', href='../styles/sass/styles.sass')
     link(rel='icon', href='../public/images/favicon_ecommerce.png', type='image/x-icon')
-    h1 #{title}
+    title #{title}
   body
     .form-container-login 
       h2 ¡Completa el formulario para iniciar sesión!
@@ -19,6 +16,6 @@ html
         br
         input(type="submit", value="Iniciar sesión")  
         br
-        a(href="#") ¿Olvidaste tu contraseña?
+        a(href="/recuperar-contrasena") ¿Olvidaste tu contraseña?
         br
-        a(href="#") ¿No tienes una cuenta? Regístrate aquí
+        a(href="/registro") ¿No tienes una cuenta? Regístrate aquí

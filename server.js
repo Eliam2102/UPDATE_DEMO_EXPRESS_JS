@@ -17,6 +17,16 @@ app.use((req, res, next) => {
   next();
 });
 
+// Ruta recuperar contraseña
+app.get('/recuperar-contrasena', (req, res) => {
+  res.render('recuperar-contrasena', { title: 'Recuperar Contraseña' });
+});
+
+// Registro nuevo ruta
+app.get('/registro', (req, res) => {
+  res.render('registro', { title: '¡Regístrate ahora!' });
+});
+
 // Configuración de la plantilla Pug
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
@@ -155,7 +165,7 @@ app.post('/procesar-compra', (req, res) => {
 });
 
 // Puerto en el que escucha el servidor
-const port = 3001;
+const port = 3002;
 app.listen(port, () => {
   console.log(`Servidor iniciado en http://localhost:${port}`);
 });
