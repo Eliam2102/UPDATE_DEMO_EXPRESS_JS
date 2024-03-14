@@ -339,11 +339,3 @@ p.empty-cart {
   background-color: #FFC700;
 }
 
-.logo {
-  display: flex;
-  margin-right: auto;
-  margin-left: 20px;
-  width: 100px;
-  height: 100px;
-  
-}
