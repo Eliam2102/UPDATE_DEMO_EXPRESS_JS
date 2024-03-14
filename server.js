@@ -24,9 +24,14 @@ app.use(express.urlencoded({ extended: true }));
 
 
 
-// Ruta recuperar contraseña
+// Ruta para mostrar el formulario de recuperar contraseña (GET)
 app.get('/recuperar-contrasena', (req, res) => {
   res.render('recuperar-contrasena', { title: 'Recuperar Contraseña' });
+});
+
+// Ruta para manejar la solicitud POST del formulario de recuperación de contraseña
+app.post('/recuperar-contrasena', (req, res) => {
+  res.redirect('/correo-restablecimiento');
 });
 
 // Registro nuevo ruta

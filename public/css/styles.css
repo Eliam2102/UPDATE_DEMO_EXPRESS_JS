@@ -119,7 +119,7 @@ p.empty-cart {
   border-radius: 5px;
   padding: 20px;
   background-color: #EABE6C;
-  align-items: center;
+  align-items: right;
 }
 .producto img {
   max-width: 100%;
@@ -337,4 +337,13 @@ p.empty-cart {
 
 .registro-container-login input[type="submit"]:hover {
   background-color: #FFC700;
+}
+
+.logo {
+  display: flex;
+  margin-right: auto;
+  margin-left: 20px;
+  width: 100px;
+  height: 100px;
+  
 }
