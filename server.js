@@ -58,7 +58,7 @@ app.get('/', (req, res) => {
   if (req.session.isLoggedIn) {
     res.render('index', { title: 'Página de Bienvenida' });
   } else {
-    res.redirect('/login'); 
+    res.redirect('/login');
   }
 });
 
@@ -128,7 +128,9 @@ app.post('/actualizar-cantidad/:id/:cantidad', (req, res) => {
     const cantidadNueva = item.cantidad + cantidad;
     if (cantidadNueva > 0 && cantidad <= producto.cantidad) {
       item.cantidad = cantidadNueva;
-      item.precio = item.cantidad * producto.precio;
+      //habia un error aqui ya que el precio se estaba multiplicando por la cantida lo que hacia que
+      //el precio unitario aumentara con respecto a cada que agregabamos un producto mas al carrito
+      item.precio =+ producto.precio;
       producto.cantidad -= cantidad;
       if (item.cantidad === 0) {
         carrito = carrito.filter(item => item.id !== idProducto);

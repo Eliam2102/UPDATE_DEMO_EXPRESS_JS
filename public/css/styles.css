@@ -4,9 +4,9 @@ body {
   padding: 0; }
 
 nav {
-  background-color: #333;
+  background-color: #240A34;
   color: white;
-  padding: 10px 0;
+  padding: 35px 0;
   text-align: center; }
   nav ul {
     list-style-type: none;
@@ -19,11 +19,11 @@ nav {
         color: white;
         text-decoration: none;
         font-weight: bold;
-        padding: 5px 10px;
+        padding: 25px 10px;
         border-radius: 5px;
         transition: background-color 0.3s; }
         nav ul li a:hover {
-          background-color: #555; }
+          background-color: #891652; }
 
 .container {
   max-width: 800px;
@@ -54,13 +54,13 @@ table {
   .action-buttons button {
     padding: 5px 10px;
     margin-right: 5px;
-    background-color: #333;
+    background-color: #240A34;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer; }
     .action-buttons button:hover {
-      background-color: #555; }
+      background-color: #891652; }
   .action-buttons span {
     margin: 0 5px;
     font-weight: bold; }
@@ -98,24 +98,31 @@ p.empty-cart {
   .search-bar button {
     padding: 8px 15px;
     margin-left: 10px;
-    background-color: #333;
+    background-color: #240A34;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s; }
     .search-bar button:hover {
-      background-color: #555; }
+      background-color: #891652; }
 
 .producto-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px; }
+  gap: 20px;
+  background-color: #EABE6C;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .producto {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 20px; }
+  padding: 20px;
+}
   .producto img {
     max-width: 100%;
     height: auto;
@@ -127,13 +134,13 @@ p.empty-cart {
     margin-bottom: 10px; }
   .producto button {
     padding: 8px 15px;
-    background-color: #333;
+    background-color: #240A34;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer; }
     .producto button:hover {
-      background-color: #555; }
+      background-color: #891652; }
 
 .button-container {
   display: flex;
@@ -197,7 +204,6 @@ p.empty-cart {
     .form-container-login form input[type="text"],
     .form-container-login form input[type="password"] {
       width: calc(100% - 22px);
-      /* Considera el ancho del borde */
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 3px; }

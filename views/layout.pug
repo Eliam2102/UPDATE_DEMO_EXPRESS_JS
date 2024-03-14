@@ -1,10 +1,11 @@
-// layout.pug
+// layout.pug//
+
 doctype html
 html
   head
     title #{title}
     link(rel='stylesheet', href='/css/styles.css')
-    link(rel='icon', href='../public/images/favicon_ecommerce.png', type='image/x-icon')
+    link(rel='icon', href='/favicon_ecommerce.png', type='image/x-icon')
   body
     nav
       ul
@@ -13,7 +14,8 @@ html
         li
           a(href='/catalogo') Catálogo de Productos
         li
-          a(href='/carrito') Carrito de Compra (#{carrito.length})
+          a(href='/carrito', class= 'carritoCompras') Carrito de Compra (#{carrito.length})
+        
 
     .container
       block content

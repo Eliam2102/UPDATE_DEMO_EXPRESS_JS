@@ -1,10 +1,10 @@
 body
-  font-family: Arial, sans-serif
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
   margin: 0
   padding: 0
 
 nav
-  background-color: #333
+  background-color: #240A34;
   color: white
   padding: 10px 0
   text-align: center
@@ -27,7 +27,7 @@ nav
         transition: background-color 0.3s
 
         &:hover
-          background-color: #555
+          background-color: #891652;
 
 .container
   max-width: 800px
@@ -43,7 +43,7 @@ table
   margin-bottom: 20px
 
   th, td
-    border: 1px solid #ddd
+    border: 3px solid #ddd
     padding: 10px
     text-align: center
 
@@ -63,14 +63,14 @@ table
   button
     padding: 5px 10px
     margin-right: 5px
-    background-color: #333
+    background-color: #240A34;
     color: white
     border: none
     border-radius: 5px
     cursor: pointer
 
     &:hover
-      background-color: #555
+      background-color: #891652;
 
   span
     margin: 0 5px
@@ -112,7 +112,7 @@ p.empty-cart
   button
     padding: 8px 15px
     margin-left: 10px
-    background-color: #333
+    background-color: #240A34;
     color: white
     border: none
     border-radius: 5px
@@ -120,21 +120,24 @@ p.empty-cart
     transition: background-color 0.3s
 
     &:hover
-      background-color: #555
+      background-color: #891652;
 
 .producto-container
   display: grid
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
-  gap: 20px
+  gap: 5px
 
 .producto
   border: 1px solid #ccc
   border-radius: 5px
-  padding: 20px
+  padding: 10px
+  display: flex
+  align-items: center
+  flex-direction: column
 
   img
-    max-width: 100%
-    height: auto
+    max-width: 200px
+    height: 200px
     margin-bottom: 10px
 
   h2
@@ -146,14 +149,14 @@ p.empty-cart
 
   button
     padding: 8px 15px
-    background-color: #333
+    background-color: #240A34;
     color: white
-    border: none
+    border: nones
     border-radius: 5px
     cursor: pointer
 
     &:hover
-      background-color: #555
+      background-color: #891652;
 
 .button-container
   display: flex
@@ -198,46 +201,3 @@ p.empty-cart
   color: #666
   text-align: center
   margin-top: 20px
-
-.form-container-login 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-  form 
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
-
-  label 
-    display: block;
-    margin-bottom: 10px;
-    
-
-  input[type="text"],
-  input[type="password"] 
-    width: calc(100% - 22px); /* Considera el ancho del borde */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    
-
-  input[type="submit"] 
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 3px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-  &:hover 
-   background-color: #0056b3;
-      
-
