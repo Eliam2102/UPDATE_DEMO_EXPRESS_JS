@@ -1,10 +1,10 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family:Georgia, 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0; }
 
 nav {
-  background-color: #240A34;
+  background-color: #007F73;
   color: white;
   padding: 35px 0;
   text-align: center; }
@@ -23,7 +23,7 @@ nav {
         border-radius: 5px;
         transition: background-color 0.3s; }
         nav ul li a:hover {
-          background-color: #891652; }
+          background-color: #FFC700; }
 
 .container {
   max-width: 800px;
@@ -54,13 +54,13 @@ table {
   .action-buttons button {
     padding: 5px 10px;
     margin-right: 5px;
-    background-color: #240A34;
+    background-color: #007F73;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer; }
     .action-buttons button:hover {
-      background-color: #891652; }
+      background-color: #FFC700; }
   .action-buttons span {
     margin: 0 5px;
     font-weight: bold; }
@@ -72,7 +72,7 @@ table {
 .procesar-compra-button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4CAF50;
+  background-color: #007F73;
   color: white;
   border: none;
   cursor: pointer; }
@@ -98,49 +98,65 @@ p.empty-cart {
   .search-bar button {
     padding: 8px 15px;
     margin-left: 10px;
-    background-color: #240A34;
+    background-color: #007F73;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s; }
     .search-bar button:hover {
-      background-color: #891652; }
+      background-color: #FFC700; }
 
 .producto-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  background-color: #EABE6C;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20;
 }
 
+
 .producto {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
+  background-color: #EABE6C;
+  align-items: center;
 }
-  .producto img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px; }
-  .producto h2 {
-    font-size: 1.5rem;
-    margin-bottom: 5px; }
-  .producto p {
-    margin-bottom: 10px; }
-  .producto button {
-    padding: 8px 15px;
-    background-color: #240A34;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer; }
-    .producto button:hover {
-      background-color: #891652; }
+.producto img {
+  max-width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  background-color: #4cafa0;
+  border-radius: 15px;
+  align-self: center;
+
+}
+.producto h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.producto p {
+  margin-bottom: 10px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.producto button {
+  padding: 8px 15px;
+  background-color: #007F73;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid white;
+}
+.producto button:hover {
+  background-color: #4CCD99;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
 
 .button-container {
   display: flex;
@@ -186,36 +202,139 @@ p.empty-cart {
   text-align: center;
   margin-top: 20px; }
 
-.form-container-login {
+.image-container {
+    text-align: center;
+    margin-top: 220px;}
+
+.icon-thumbnail {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px; 
+  vertical-align: middle;}
+
+.container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; }
-  .form-container-login form {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  color: #007F73;}
+
+.container h2 {
+  margin-bottom: 20px;}
+
+.container form {
+  padding: 20px;
+  background-color: rgba(20, 134, 138, 0.5);
+  border-radius: 10px;}
+
+.container label, input, a {
+  display: block;
+  margin-bottom: 10px;
+  color: #FFC700; 
+  text-decoration: none;}
+
+.container input[type="submit"] {
+    background-color: #007F73;
+    color: #ffffff; 
+    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9; }
-    .form-container-login form label {
-      display: block;
-      margin-bottom: 10px; }
-    .form-container-login form input[type="text"],
-    .form-container-login form input[type="password"] {
-      width: calc(100% - 22px);
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 3px; }
-    .form-container-login form input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border: none;
-      border-radius: 3px;
-      background-color: #007bff;
-      color: #fff;
-      cursor: pointer;
-      transition: background-color 0.3s ease; }
-      .form-container-login form input[type="submit"]:hover {
-        background-color: #0056b3; }
+    cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #FFC700;
+}
+
+.recuperar-contrasena-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.recuperar-contrasena-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color:#007F73;
+}
+
+.recuperar-contrasena-container form {
+  padding: 20px;
+  background-color: rgba(20, 134, 138, 0.5); 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recuperar-contrasena-container label, input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.recuperar-contrasena-container input[type="email"] {
+  width: 100%; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.recuperar-contrasena-container input[type="submit"] {
+  width: 100%; 
+  background-color: #007F73; 
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.recuperar-contrasena-container input[type="submit"]:hover {
+  background-color: #FFC700;
+}
+
+.registro-container-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  color: #007F73;
+}
+
+.registro-container-login h2 {
+  margin-bottom: 20px;
+}
+
+.registro-container-login form {
+  padding: 20px;
+  background-color: rgba(20, 134, 138, 0.5);
+  border-radius: 10px;
+}
+
+.registro-container-login label, .registro-container-login input, .registro-container-login a {
+  display: block;
+  margin-bottom: 10px;
+  color: #FFC700; 
+  text-decoration: none;
+}
+
+.registro-container-login input[type="submit"] {
+  background-color: #007F73;
+  color: #ffffff; 
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registro-container-login input[type="submit"]:hover {
+  background-color: #FFC700;
+}

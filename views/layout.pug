@@ -1,21 +1,33 @@
-// layout.pug//
-
 doctype html
 html
   head
+    link(rel='icon', href='/images/favicon_ecommerce.png', type='image/x-icon')
     title #{title}
     link(rel='stylesheet', href='/css/styles.css')
-    link(rel='icon', href='/favicon_ecommerce.png', type='image/x-icon')
+    
   body
     nav
       ul
         li
-          a(href='/') Inicio
+          a(href='/', class='icon-link')
+            img(src='/images/inicio.webp',  class='icon-thumbnail')
+            | Inicio
         li
-          a(href='/catalogo') Catálogo de Productos
+          a(href='/catalogo', class='icon-link')
+            img(src='/images/catalogo.png', class='icon-thumbnail')
+            | Catálogo de Productos
         li
-          a(href='/carrito', class= 'carritoCompras') Carrito de Compra (#{carrito.length})
-        
+          a(href='/carrito', class='icon-link')
+            img(src='/images/carrito.png', class='icon-thumbnail')
+            | Carrito de Compra (#{carrito.length})
+        li
+          a(href='/', class='icon-link')
+            img(src='/images/usuario-gris.png', class='icon-thumbnail')
+            | Hola, Admin
+        li
+          a(href='/login', class='icon-link logout-button')
+            img(src='/images/cerrar sesion.png', class='icon-thumbnail')
+            | Cerrar sesión
 
     .container
       block content

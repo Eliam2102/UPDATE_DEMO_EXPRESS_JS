@@ -17,6 +17,13 @@ app.use((req, res, next) => {
   next();
 });
 
+// Middleware para servir archivos estáticos desde la carpeta 'public'
+app.use('/css/imagenes', express.static(path.join(__dirname, 'public/css/imagenes')));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
+
 // Ruta recuperar contraseña
 app.get('/recuperar-contrasena', (req, res) => {
   res.render('recuperar-contrasena', { title: 'Recuperar Contraseña' });
@@ -47,18 +54,27 @@ app.post('/login', (req, res) => {
   const { username, password } = req.body;
   if (username === "admin" && password === "12345") {
     req.session.isLoggedIn = true;
+    req.session.username = username;
     res.redirect('/');
   } else {
     res.redirect('/login');
   }
 });
 
+// Ruta para mostrar la página principal
+app.get('/', (req, res) => {
+  const username = req.session.username;
+  res.render('index', { title: 'Página de Inicio', username });
+});
+
+
+
 // Ruta para la página de inicio
 app.get('/', (req, res) => {
   if (req.session.isLoggedIn) {
     res.render('index', { title: 'Página de Bienvenida' });
   } else {
-    res.redirect('/login');
+    res.redirect('/login'); 
   }
 });
 
@@ -128,9 +144,7 @@ app.post('/actualizar-cantidad/:id/:cantidad', (req, res) => {
     const cantidadNueva = item.cantidad + cantidad;
     if (cantidadNueva > 0 && cantidad <= producto.cantidad) {
       item.cantidad = cantidadNueva;
-      //habia un error aqui ya que el precio se estaba multiplicando por la cantida lo que hacia que
-      //el precio unitario aumentara con respecto a cada que agregabamos un producto mas al carrito
-      item.precio =+ producto.precio;
+      item.precio = item.cantidad * producto.precio;
       producto.cantidad -= cantidad;
       if (item.cantidad === 0) {
         carrito = carrito.filter(item => item.id !== idProducto);
